@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Chase-Bank-Transaction-Viewer/precache-manifest.d40dcad0d9984f59fbe07b79354ff457.js"
+  "/Chase-Bank-Transaction-Viewer/precache-manifest.bad67695473aeb922d9a6230dde7bb57.js"
 );
 
 self.addEventListener('message', (event) => {

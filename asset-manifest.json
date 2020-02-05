@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Chase-Bank-Transaction-Viewer/static/css/main.4f8aef01.chunk.css",
-    "main.js": "/Chase-Bank-Transaction-Viewer/static/js/main.f7c9043d.chunk.js",
-    "main.js.map": "/Chase-Bank-Transaction-Viewer/static/js/main.f7c9043d.chunk.js.map",
+    "main.js": "/Chase-Bank-Transaction-Viewer/static/js/main.b9c82f28.chunk.js",
+    "main.js.map": "/Chase-Bank-Transaction-Viewer/static/js/main.b9c82f28.chunk.js.map",
     "runtime-main.js": "/Chase-Bank-Transaction-Viewer/static/js/runtime-main.ef88024e.js",
     "runtime-main.js.map": "/Chase-Bank-Transaction-Viewer/static/js/runtime-main.ef88024e.js.map",
     "static/js/2.a363d0a9.chunk.js": "/Chase-Bank-Transaction-Viewer/static/js/2.a363d0a9.chunk.js",
     "static/js/2.a363d0a9.chunk.js.map": "/Chase-Bank-Transaction-Viewer/static/js/2.a363d0a9.chunk.js.map",
     "index.html": "/Chase-Bank-Transaction-Viewer/index.html",
-    "precache-manifest.d40dcad0d9984f59fbe07b79354ff457.js": "/Chase-Bank-Transaction-Viewer/precache-manifest.d40dcad0d9984f59fbe07b79354ff457.js",
+    "precache-manifest.bad67695473aeb922d9a6230dde7bb57.js": "/Chase-Bank-Transaction-Viewer/precache-manifest.bad67695473aeb922d9a6230dde7bb57.js",
     "service-worker.js": "/Chase-Bank-Transaction-Viewer/service-worker.js",
     "static/css/main.4f8aef01.chunk.css.map": "/Chase-Bank-Transaction-Viewer/static/css/main.4f8aef01.chunk.css.map",
     "static/js/2.a363d0a9.chunk.js.LICENSE": "/Chase-Bank-Transaction-Viewer/static/js/2.a363d0a9.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.ef88024e.js",
     "static/js/2.a363d0a9.chunk.js",
     "static/css/main.4f8aef01.chunk.css",
-    "static/js/main.f7c9043d.chunk.js"
+    "static/js/main.b9c82f28.chunk.js"
   ]
 }
