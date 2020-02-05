@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "dataframe-js": "^1.4.3",
     "file-saver": "^2.0.2",
+    "gh-pages": "^2.2.0",
     "radium": "^0.26.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -16,6 +17,8 @@
     "react-scroll": "^1.7.16"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -35,5 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "https://emgunn.github.io/Chase-Bank-Transaction-Viewer"
 }
