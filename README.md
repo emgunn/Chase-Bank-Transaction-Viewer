@@ -4,11 +4,13 @@ Chase Bank Transaction Viewer
 - Load .csv file(s) that you can download from your bank containing information on transactions
 - Only supports Chase Bank's .csv files
 - Made using React, Material-UI, and dataframe-js
+- You can visit the webpage at https://emgunn.github.io/Chase-Bank-Transaction-Viewer/
 
-How to run:
------------
+How to run locally:
+-------------------
 - Run 'npm install'
 - Run 'npm start'
+- Note that this will run the development build and will likely result in slower performance when compared to the production build
 
 How to use:
 -----------
@@ -45,4 +47,4 @@ How to use:
 Issues to fix:
 --------------
 - Allow users to "stack" filters so that they can be removed. Currently, you cannot remove a filter once it is applied. This can be circumvented by saving to cache or exporting the .csv file, but this is not very efficient.
-- Slow rendering when data size becomes too large.
+- Slow rendering when data size becomes too large. Possibly look into react-window or react-virtualized.
