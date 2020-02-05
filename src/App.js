@@ -30,7 +30,8 @@ class App extends Component {
     rightAmount: null,
     error: false,
     ascending: true,
-    sortDataBy: null
+    sortDataBy: null,
+    showStats: false
   }
 
   options = ['date', 'vendor', 'category', 'amount']
@@ -271,7 +272,8 @@ class App extends Component {
         key: Math.random().toString(36).slice(2)
       })
       this.setState({
-        entries: newEntries
+        entries: newEntries,
+        toggleStats: false
       })
     }
 
@@ -311,7 +313,8 @@ class App extends Component {
     this.setState({
       entries: [],
       uploaded: [],
-      error: false
+      error: false,
+      showStats: false
     })
   }
 
@@ -387,17 +390,21 @@ class App extends Component {
     console.log(newColl)
   }
 
-  // dateChange1 = event => {
-  //   this.setState({
-  //     leftDate: event.target.value
-  //   })
-  // }
+  toggleStats = () => {
+    this.setState({
+      showStats: !this.state.showStats
+    })
+  }
 
-  // dateChange2 = event => {
-  //   this.setState({
-  //     rightDate: event.target.value
-  //   })
-  // }
+  calcStats = () => {
+    let df = this.createDataFrame()
+    let sum = parseFloat((df.stat.sum('amount') * -1).toFixed(2)).toLocaleString('en-US', {style: "currency",currency: "USD"})
+    let min = parseFloat((df.stat.max('amount') * -1).toFixed(2)).toLocaleString('en-US', {style: "currency",currency: "USD"})
+    let max = parseFloat((df.stat.min('amount') * -1).toFixed(2)).toLocaleString('en-US', {style: "currency",currency: "USD"})
+    let mean = parseFloat((df.stat.mean('amount') * -1).toFixed(2)).toLocaleString('en-US', {style: "currency",currency: "USD"})
+    let sd = parseFloat(df.stat.sd('amount').toFixed(2)).toLocaleString('en-US', {style: "currency",currency: "USD"})
+    return `Sum: ${sum.toLocaleString('en-US', {style: "currency",currency: "USD"})} | Min: ${min} | Max: ${max} | Mean: ${mean} | Standard deviation: ${sd}`
+  }
 
   MyButton = withStyles({
     // contained: {
@@ -473,17 +480,29 @@ class App extends Component {
             borderRadius: '10px', display: 'inline-flex'}}>Transaction Viewer</span>
         </h1>
 
-        {/* <button onClick={this.setCategories}></button> */}
-
         <div style={{display: 'block', paddingBottom: '10px'}}>
-          <this.MyButton size='small' style={{root: {
+          <this.MyButton size='small' style={{marginLeft: '9px', root: {
             backgroundColor: '#dfe6e9'
           }}} variant="contained" onClick={this.uploadClick}>Upload</this.MyButton>
           <input style={{display: 'none'}} type="file" id="csv" accept=".csv" multiple onChange={this.loadFiles}/>
           {this.state.entries.length === 0 ?
-            <this.MyGrayButton size='small' color='inherit' variant="contained" onClick={this.loadCache}>Load Cache</this.MyGrayButton>
+            <this.MyGrayButton style={{marginLeft: '6px'}} size='small' color='inherit' variant="contained" onClick={this.loadCache}>Load Cache</this.MyGrayButton>
+            : null}
+          {this.state.entries.length !== 0 ?
+            <this.MyGrayButton style={{marginLeft: '6px'}} onClick={this.toggleStats} size='small'
+              color='inherit' variant="contained">Toggle Stats</this.MyGrayButton>
             : null}
         </div>
+
+        {this.state.showStats ?
+          <div>
+            <span>
+              <p style={{color: '#d63031', fontWeight: 'bold', fontFamily: [
+                '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial',
+                'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"'].join(',')}}>{this.calcStats()}</p>
+            </span>
+          </div>
+        : null}
 
         {this.state.entries.length !== 0 ? 
         <div style={{display: 'inline-block', paddingBottom: '10px'}}>
@@ -495,44 +514,6 @@ class App extends Component {
         <div>
           <p id='errorMsg'>Filter canceled, resulting data frame empty...</p>
         </div> : null}
-
-        {/* {this.state.entries.length !== 0 ? 
-        <div className='buttonList'>
-          <button onClick={this.filter}>Filter</button>
-          <ColumnSelect name='Filter By' change={event => {
-              this.setState({
-                  filterBy: event.target.value
-              })
-          }}></ColumnSelect>
-          {this.state.filterBy === 'date' ?
-          <div>
-            <input id='filterDateLeft' type='text' placeholder='mm/dd/yyyy'></input>
-            <span> &lt; date &lt; </span>
-            <input id='filterDateRight' type='text' placeholder='mm/dd/yyyy'></input>
-          </div> :
-          null}
-          {this.state.filterBy === 'vendor' ?
-          <div>
-            <select id='filterVendorType'>
-              <option value='contains'>Contains</option>
-              <option value='match'>Match</option>
-              <option value='starts'>Starts With</option>
-            </select>
-            <input type='text' placeholder='vendor name query'></input>
-          </div>:
-          null}
-          {this.state.filterBy === 'category' ?
-          <CategorySelect identifier='categorySelect' name='categorySelect'></CategorySelect>:
-          null}
-          {this.state.filterBy === 'amount' ?
-          <div>
-            <input id='filterAmountLeft' type='text' placeholder='left amount'></input>
-            <span> &lt; amount &lt; </span>
-            <input id='filterAmountRight' type='text' placeholder='right amount'></input>
-          </div>:
-          null}
-        </div> : null
-        } */}
 
         {this.state.entries.length !== 0 ?
         <div className='buttonList'>
