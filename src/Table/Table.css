@@ -1,0 +1,39 @@
+table, th, td, tfoot {
+    font-family: "Roboto";
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    font-size: 1.2rem;
+    height: 1.5rem;
+    text-align: center;
+    padding: 1px;
+}
+
+.deleteRow {
+    font-family: "Roboto";
+}
+
+.deleteRow:hover {
+    cursor: pointer;
+    background-color: #e74c3c;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f1c40f;
+}
+
+.tableHeader:hover {
+    background-color: white;
+}
+
+.tableHeading:hover {
+    background-color: #3498db;
+    cursor: pointer;
+}

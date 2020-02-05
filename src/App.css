@@ -1,5 +1,40 @@
 .App {
   text-align: center;
+  margin: 5rem;
+}
+
+.buttonList {
+  text-align: center;
+  display: inline-flexbox;
+  padding-bottom: 10px;
+}
+
+/* .fileUpload {
+  border: 1px solid #7f8c8d;
+  background-color: #bdc3c7;
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 200px;
+}
+
+.fileUpload:active {
+  transform: translate(0px, 3px);
+}
+
+.fileUpload:hover {
+  background-color: #95a5a6;
+  border: 1px solid #2c3e50;
+} */
+
+h1 {
+  padding: 10px;
+  font-size: 50px;
+}
+
+#errorMsg {
+  color: #d63031;
+  font-style: italic;
 }
 
 .App-logo {
