@@ -19,6 +19,9 @@ How to Use:
 - You can upload as many .csv files as you want; they will all be appended together
 - You can save your current list of transactions into a .csv file to your local machine by typing in a file name into the bottom text box and then pressing the "Export" button
 
+### Format for .csv files:
+- A sample .csv file called "sample.csv" can be found in the directory for reference
+
 ### Using the cache:
 - There is a single cache provided that lets you store a single list (will disappear if the page is reloaded or left)
 - Click the "Load Cache" button to display the cached list
