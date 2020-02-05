@@ -12,6 +12,8 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Scroll from 'react-scroll';
 
+import { HashRouter, Route, Link } from "react-router-dom";
+
 class App extends Component {
   
   state = { 
