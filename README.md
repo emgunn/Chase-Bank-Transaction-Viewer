@@ -6,10 +6,11 @@ Chase Bank Transaction Viewer
 - Made using React, Material-UI, and dataframe-js
 - You can visit the webpage at https://emgunn.github.io/Chase-Bank-Transaction-Viewer/
 
-How to run:
------------
+How to run locally:
+-------------------
 - Run 'npm install'
 - Run 'npm start'
+- Note that this will run the development build and will likely result in slower performance when compared to the production build
 
 How to use:
 -----------
