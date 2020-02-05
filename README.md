@@ -1,16 +1,16 @@
 Chase Bank Transaction Viewer
-=======================
+=============================
 - A web app where you can view, sort, filter, and rearrange data regarding financial transactions
 - Load .csv file(s) that you can download from your bank containing information on transactions
 - Only supports Chase Bank's .csv files
 - Made using React, Material-UI, and dataframe-js
 
-How to Run:
+How to run:
 -----------
 - Run 'npm install'
 - Run 'npm start'
 
-How to Use:
+How to use:
 -----------
 ### Uploading and saving .csv files:
 - Use the blue "Upload" button to select a .csv file locally to use
@@ -42,7 +42,7 @@ How to Use:
 ### Deleting rows:
 - You can delete a single row in your table by clicking on the red x to the very right of the row
 
-Issues to Fix:
--------
+Issues to fix:
+--------------
 - Allow users to "stack" filters so that they can be removed. Currently, you cannot remove a filter once it is applied. This can be circumvented by saving to cache or exporting the .csv file, but this is not very efficient.
 - Slow rendering when data size becomes too large.
