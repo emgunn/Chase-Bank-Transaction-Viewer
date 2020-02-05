@@ -36,13 +36,23 @@ How to use:
 ### Filtering your data:
 - You can filter your data by clicking the drop-down filter menu and selecting your method of filtering
 - If the filter you apply results in an empty data frame, it will not be displayed
-#### Filter by date
-#### Filter by vendor
-#### Filter by category
-#### Filter by amount
+- Ways to filter data:
+  - Filter by date
+  - Filter by vendor
+  - Filter by category
+  - Filter by amount
 
 ### Deleting rows:
 - You can delete a single row in your table by clicking on the red x to the very right of the row
+
+### Viewing statistics:
+- You can toggle the display for statistics about your data
+- Different statistics supported:
+  - Sum
+  - Min
+  - Max
+  - Mean
+  - Standard deviation
 
 Issues to fix:
 --------------
