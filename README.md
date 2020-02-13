@@ -8,8 +8,14 @@ Chase Bank Transaction Viewer
 
 How to run locally:
 -------------------
-- Run 'npm install'
-- Run 'npm start'
+- Install with npm
+```sh
+npm install
+```
+- Run
+```sh
+npm start
+```
 - Note that this will run the development build and will likely result in slower performance when compared to the production build
 
 How to use:
